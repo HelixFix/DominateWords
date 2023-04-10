@@ -6,6 +6,76 @@
   "icons": {
     "64": "icons/icon.png"
   },
+  "background": {
+    "scripts": [
+      "background_script.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.lemonde.fr/*",
+        "*://www.lefigaro.fr/*",
+        "*://www.liberation.fr/*",
+        "*://www.lexpress.fr/*",
+        "*://www.nouvelobs.com/*",
+        "*://www.rfi.fr/*",
+        "*://www.sudouest.fr/*",
+        "*://www.lavoixdunord.fr/*",
+        "*://www.leparisien.fr/*",
+        "*://www.ladepeche.fr/*",
+        "*://www.lalsace.fr/*",
+        "*://www.lavoixdelanord.fr/*",
+        "*://www.estrepublicain.fr/*",
+        "*://www.ouest-france.fr/*",
+        "*://www.laprovence.com/*",
+        "*://www.lapresse.ca/*",
+        "*://www.lanouvellerepublique.fr/*",
+        "*://www.varmatin.com/*",
+        "*://www.lapressedarmor.fr/*",
+        "*://www.lepopulaire.fr/*",
+        "*://www.lesechos.fr/*",
+        "*://www.midilibre.fr/*",
+        "*://www.lanouvellagazette.be/*",
+        "*://www.lavoixdunord.fr/*",
+        "*://www.lavoixducantlaouest.fr/*",
+        "*://www.parismatch.com/*",
+        "*://www.nicematin.com/*",
+        "*://www.ladepeche.fr/*",
+        "*://www.lalsace.fr/*",
+        "*://www.francebleu.fr/*",
+        "*://www.larep.fr/*",
+        "*://www.leprogres.fr/*",
+        "*://www.challenges.fr/*",
+        "*://www.humanite.fr/*",
+        "*://www.courrier-picard.fr/*",
+        "*://www.leberry.fr/*",
+        "*://www.lanouvellerepublique.fr/*",
+        "*://www.republicain-lorrain.fr/*",
+        "*://www.lunion.fr/*",
+        "*://www.varmatin.com/*",
+        "*://www.ledauphine.com/*",
+        "*://www.lecourrierdelouest.fr/*",
+        "*://www.vosgesmatin.fr/*",
+        "*://www.sudradio.fr/*",
+        "*://www.franceinter.fr/*",
+        "*://www.francetvinfo.fr/*",
+        "*://www.france24.com/*",
+        "*://www.france3-regions.francetvinfo.fr/*",
+        "*://www.europe1.fr/*",
+        "*://www.rtl.fr/*",
+        "*://www.rmc.bfmtv.com/*",
+        "*://www.bfmtv.com/*",
+        "*://www.cnews.fr/*",
+        "*://www.tf1.fr/*",
+        "*://www.lci.fr/*",
+        "*://www.20minutes.fr/*"
+      ],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ],
   "browser_action": {
     "default_icon": {
       "64": "icons/icon.png"
