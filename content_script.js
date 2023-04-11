@@ -1,14 +1,28 @@
-// Put all the javascript code here, that you want to execute after page load.
+// Mettre tous les mots à remplacer et leurs correspondances dans un objet
+const wordsToReplace = {
+  "Plan social"     : "Plan de licenciement",
+  "charges sociales": "cotisations sociales",
+  "inflation"       : "hausse des prix",
+  "taux d'intérêt"  : "coût du crédit"
+};
+
 let counter = 0;
 
 /**
- * This function replaces certain words in the HTML body with their corresponding replacements.
+ * Cette fonction remplace certains mots dans le corps HTML avec leurs correspondances.
  */
 function replaceWords() {
-  let body         = document.body.innerHTML;
-  let replacedBody = body.replace(/Plan social/gi, "Plan de licenciement").replace(/charges sociales/gi, "cotisations sociales");
-  document.body.innerHTML = replacedBody;
-  counter++;
+  let body = document.body.innerHTML;
+
+  for (const word in wordsToReplace) {
+    const regex = new RegExp(word, "gi");
+    body = body.replace(regex, function(match) {
+      counter++;
+      return `<span style="text-decoration: underline dotted;" title="${match}">${wordsToReplace[word]}</span>`;
+    });
+  }
+
+  document.body.innerHTML = body;
   updateIcon(counter);
 }
 
@@ -25,4 +39,3 @@ if (!document.querySelector('.gdpr-lmd-wall__content')) {
     // La classe est présente, ne rien faire
     console.log('La classe est présente, le script est désactivé.');
   }
-  
